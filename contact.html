@@ -23,13 +23,17 @@
         </header>
         <main>
             <div class="content">
-                <div id="introduction">
-                    <img src="images/paulina_karas.png" alt="Paulina Karaś - picture"/>
-                    <p>Hello, I am Paulina</p>
-                </div>
-                <div id="description">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>
+                <form class="contact-form" action="#" method="post">
+                    <h1>Contact me!</h1>
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name"/>
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Give your email"/>
+                    <label for="textarea"></label>
+                    <textarea id="textarea" name="textarea" rows="10" placeholder="Message"></textarea>
+                    <label></label>
+                    <button type="submit" disabled>SEND</button>               
+                </form>
             </div>
         </main>
         <footer>
