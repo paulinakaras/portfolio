@@ -187,6 +187,7 @@ textarea {
 }
 
 #architecture {
+    font-size: 20px;
     padding: 20px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -215,4 +216,21 @@ textarea {
     grid-area: right;
     width: var(--pictures-width);
     max-height: var(--pictures-height);
+}
+
+#mobile {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(var(--pictures-column), 1fr);
+    grid-gap: var(--default-grid-gap);
+    justify-items: center;
+    align-items: center;
+}
+
+#mobile img {
+    height: 500px;
+}
+
+.red {
+    color: red;
 }
