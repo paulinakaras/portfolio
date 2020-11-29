@@ -4,8 +4,8 @@
     --max-width: 1200px;
     --default-grid-gap: 10px;
     --pictures-column: 2;
-    --pictires-width: calc((var(--max-width) - var(--default-grid-gap)) / var(--pictures-column));
-    --pictires-height: calc(var(--pictires-width) * 0.65);
+    --pictures-width: calc((var(--max-width) - var(--default-grid-gap)) / var(--pictures-column));
+    --pictures-height: calc(var(--pictures-width) * 0.65);
 }
 
 body {
@@ -182,6 +182,37 @@ textarea {
 }
 
 .pictures img {
-    width: var(--pictires-width);
-    height: var(--pictires-height);
+    width: var(--pictures-width);
+    height: var(--pictures-height);
+}
+
+#architecture {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: var(--default-grid-gap);
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+    "lefttop right"
+    "leftbottom right";
+}
+
+#architecture img {
+    width: var(--pictures-width);
+    height: calc(var(--pictures-width) * 0.7); 
+}
+
+#architecture .lefttop {
+    grid-area: lefttop;
+}
+
+#architecture .leftbottom {
+    grid-area: leftbottom;
+}
+
+#architecture .right {
+    grid-area: right;
+    width: var(--pictures-width);
+    max-height: var(--pictures-height);
 }
