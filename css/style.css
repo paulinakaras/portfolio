@@ -186,7 +186,7 @@ textarea {
     height: var(--pictures-height);
 }
 
-#architecture {
+.arch-component {
     font-size: 20px;
     padding: 20px 0;
     display: grid;
@@ -199,20 +199,20 @@ textarea {
     "leftbottom right";
 }
 
-#architecture img {
+.arch-component img {
     width: var(--pictures-width);
     height: calc(var(--pictures-width) * 0.7); 
 }
 
-#architecture .lefttop {
+.arch-component .lefttop {
     grid-area: lefttop;
 }
 
-#architecture .leftbottom {
+.arch-component .leftbottom {
     grid-area: leftbottom;
 }
 
-#architecture .right {
+.arch-component .right {
     grid-area: right;
     width: var(--pictures-width);
     max-height: var(--pictures-height);
