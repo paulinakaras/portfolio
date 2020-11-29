@@ -42,6 +42,7 @@ header {
     padding: 0 40px;
     margin: 0 auto;
     overflow: auto;
+    
 }
 
 header .flex, footer .flex {
@@ -50,6 +51,7 @@ header .flex, footer .flex {
 
 nav ul {
     display: flex;
+    padding: 0px;
 }
 
 nav a {
@@ -122,31 +124,9 @@ footer {
 
 .fa {
     padding: 10px;
-    margin: 0 5px;
     font-size: 20px;
     text-align: center;
     text-decoration: none;
-}
-
-@media screen and (max-width:800px) {
-    #introduction {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    #introduction img {
-        max-width: 200px;
-        padding: 10px; 
-    }
-    #introduction p {
-        font-size: 20px;
-    }
-    #description p {
-        font-size: 17px;
-    }
-    header .flex {
-        justify-content: space-between;
-        flex-direction: column;
-    }
-    
 }
 
 textarea {
@@ -178,7 +158,6 @@ textarea {
     grid-gap: var(--default-grid-gap);
     justify-items: center;
     align-items: center;
-    
 }
 
 .pictures img {
@@ -214,8 +193,8 @@ textarea {
 
 .arch-component .right {
     grid-area: right;
-    width: var(--pictures-width);
-    max-height: var(--pictures-height);
+    padding: 10px;
+    margin: 0 15px;
 }
 
 #mobile {
@@ -233,4 +212,49 @@ textarea {
 
 .red {
     color: red;
+}
+
+@media screen and (max-width:800px) {
+    header .flex {
+        justify-content: center;
+        flex-direction: column;
+    }
+    #introduction {
+        grid-template-columns: 1fr;
+    }
+    #introduction img {
+        max-width: 200px;
+        padding: 10px; 
+    }
+    #introduction p {
+        font-size: 20px;
+    }
+    #description p {
+        font-size: 17px;
+    }
+    #mobile {
+        grid-template-columns: 1fr;
+    }
+    .pictures {
+        grid-template-columns: 1fr;
+    }
+    .pictures img {
+        width: 320px;
+        height: 227px;
+    }
+    .arch-component img {
+        width: 320px;
+        height: 245px; 
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .arch-component {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "lefttop"
+        "leftbottom"
+        "right"
+        "right";
+    }
 }
