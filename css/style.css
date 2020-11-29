@@ -2,8 +2,11 @@
     --background-color-footer: lightgray;
     --default-font: sans-serif;
     --max-width: 1200px;
+    --default-grid-gap: 10px;
+    --pictures-column: 2;
+    --pictires-width: calc((var(--max-width) - var(--default-grid-gap)) / var(--pictures-column));
+    --pictires-height: calc(var(--pictires-width) * 0.65);
 }
-
 
 body {
     background-color: var(--background-color-footer);
@@ -96,7 +99,7 @@ main {
     font-size: 40px;
 }
 
-#description p {
+.description p {
     padding: 10px;
     margin: 0 15px;
     font-size: 20px;
@@ -153,7 +156,7 @@ textarea {
 
 .contact-form {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: var(--default-grid-gap);
     justify-content: center;
     align-content: center;
     padding: 150px 20px;
@@ -163,4 +166,22 @@ textarea {
 .contact-form input,textarea,button {
     font-size: 20px;
     width: 300px;
+}
+
+#interior {
+    display: grid;
+}
+
+.pictures {
+    display: grid;
+    grid-template-columns: repeat(var(--pictures-column), 1fr);
+    grid-gap: var(--default-grid-gap);
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.pictures img {
+    width: var(--pictires-width);
+    height: var(--pictires-height);
 }
