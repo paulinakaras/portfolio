@@ -4,8 +4,6 @@
     --max-width: 1200px;
     --default-grid-gap: 10px;
     --pictures-column: 2;
-    --pictures-width: calc((var(--max-width) - var(--default-grid-gap)) / var(--pictures-column));
-    --pictures-height: calc(var(--pictures-width) * 0.65);
 }
 
 body {
@@ -16,7 +14,6 @@ body {
     padding: 0;
     margin: 0;
 }
-
 
 ul {
     list-style-type: none;
@@ -92,8 +89,8 @@ main {
 }
 
 #introduction img {
-    max-width: 400px;
-    height: auto;
+    width: 75%;
+    height: auto; 
     padding: 20px;
 }
 
@@ -142,7 +139,6 @@ textarea {
     padding: 150px 20px;
 }
 
-
 .contact-form input,textarea,button {
     font-size: 20px;
     width: 300px;
@@ -161,8 +157,8 @@ textarea {
 }
 
 .pictures img {
-    width: var(--pictures-width);
-    height: var(--pictures-height);
+    width: 100%;
+    height: auto; 
 }
 
 .arch-component {
@@ -179,8 +175,8 @@ textarea {
 }
 
 .arch-component img {
-    width: var(--pictures-width);
-    height: calc(var(--pictures-width) * 0.7); 
+    width: 100%;
+    height: auto; 
 }
 
 .arch-component .lefttop {
@@ -207,11 +203,16 @@ textarea {
 }
 
 #mobile img {
-    height: 500px;
+    width: 50%;
+    height: auto; 
 }
 
 .red {
     color: red;
+}
+
+.half-opacity {
+     opacity: 0.5;
 }
 
 @media screen and (max-width:800px) {
@@ -222,29 +223,11 @@ textarea {
     #introduction {
         grid-template-columns: 1fr;
     }
-    #introduction img {
-        max-width: 200px;
-        padding: 10px; 
-    }
-    #introduction p {
-        font-size: 20px;
-    }
-    #description p {
-        font-size: 17px;
-    }
     #mobile {
         grid-template-columns: 1fr;
     }
     .pictures {
         grid-template-columns: 1fr;
-    }
-    .pictures img {
-        width: 320px;
-        height: 227px;
-    }
-    .arch-component img {
-        width: 320px;
-        height: 245px; 
     }
 }
 
